@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Create if resources folder if not exist 
+mkdir -p ../resources
+
+
 # Test if resources/archive.json exist
 FILE=../resources/2018-11-02-2.json
 if [ -f "$FILE" ]; then
