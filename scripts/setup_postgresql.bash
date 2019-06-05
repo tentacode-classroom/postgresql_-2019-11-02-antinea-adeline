@@ -19,6 +19,9 @@ sudo apt-get update
 #Proceed to installation of postgresql
 sudo apt install postgresql-11 -y
 
+#Check postgresql version
+psql --version
+
 # Start the service
 
 echo "Starting postgresql service : "

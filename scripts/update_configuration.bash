@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo -u postgres psql -f postgres_conf.sql
+sudo -u postgres psql -f ../sql/postgres_conf.sql
 
 
 #Restart service postgres
