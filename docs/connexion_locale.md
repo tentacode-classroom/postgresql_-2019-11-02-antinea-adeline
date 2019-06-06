@@ -27,7 +27,7 @@ Affichera le message `psql: FATAL:  Peer authentication failed for user "admin"`
 
 ## Modifier le fichier pg_hba.conf
 
-Il faudra modifier le fichier `/etc/postgresql/main/11/pg_hba.conf` pour autoriser la connection par mot de passe sur le compte admin, au bon endroit pour éviter qu'une autre règle s'applique :
+Il faudra modifier le fichier `/etc/postgresql/11/main/pg_hba.conf` pour autoriser la connection par mot de passe sur le compte admin, au bon endroit pour éviter qu'une autre règle s'applique :
 
 ```
 local all admin md5
