@@ -44,7 +44,7 @@ cp $CURRENT_DIR/.pgpass ../etc
 sudo cp /etc/postgresql/11/main/pg_hba.conf ../etc
 
 
-# #Get ins
+# create user with super_admin
 
 psql --username super_admin -f ../sql/create_user.sql
 
