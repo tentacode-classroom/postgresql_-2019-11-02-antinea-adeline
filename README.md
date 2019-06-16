@@ -1,10 +1,10 @@
 # postgresql_-2019-11-02-antinea-adeline
 
 ## Before Starting
-    :white_check_mark: Make sure all command you type are in sudo.
-    :warning: Make sure postgresql service is started overwise it will not work.
+:white_check_mark: Make sure all command you type are in sudo.
+:warning: Make sure postgresql service is started overwise it will not work.
     
-    Run:
+Run:
 `sudo service postgresql start`
 
 ## Installation
