@@ -1,4 +1,4 @@
-# postgresql_-2019-11-02-antinea-adeline
+#  Projet Postgresq 2019-11-02 Antinea et Adeline
 
 ## Before Starting
 
@@ -64,6 +64,29 @@ It changes:
 You will find below the command to run the script:
 `./update_configuration.bash`
 
+## Create views
+This script run a sql file which will create three views in order to get so statistics 
+
+ 1. repo_have_most_commit : Will get the all the repo to the one which have the most commit whoever has the least. 
+ 2. issues_most_commented: Get the most commented issue to the one which has the last 
+ 3. number_repo_created_per_date: Count all repository created per day. 
+
+You will find below the command to run the script:
+`./create_views.bash`
+
+
+## Backup
+This script will create a directory named `backup` and will backup our `github_events` database only to a file named `backup_github_events.sql`.
+Then it will backup all our roles into `roles.sql` file.
+
+
+You will find below the command to run the script:
+`./backup.bash`
+
+
+## Pg_hba.conf
+In the `etc` directory you'll find a file named **pg_hba.conf**. 
+Copy pg_hba configuration to yours . All the informations you need are indicated in `docs` directory files.
 
 
 
