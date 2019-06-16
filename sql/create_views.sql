@@ -2,13 +2,12 @@ DROP VIEW issues_most_commented;
 DROP VIEW number_repo_created_per_date;
 DROP VIEW repo_have_most_commit;
 
-
-
 CREATE VIEW repo_have_most_commit AS 
-     SELECT repo ->> 'name' as "Nom du Repository", 
-     COUNT(commits) AS commit_count 
-     FROM push_events 
-     GROUP BY repo ->> 'name'
+     SELECT repo ->> 'id' as "Id repo",
+     repo ->> 'name' as "Nom du Repository", 
+     SUM(array_length(pe.commits, 1)) AS commit_count 
+     FROM push_events pe
+     GROUP BY repo ->> 'id', repo ->>'name'
      ORDER BY commit_count DESC;
 
 CREATE VIEW issues_most_commented AS 
