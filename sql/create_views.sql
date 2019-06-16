@@ -1,8 +1,8 @@
 \c github_events
 
-DROP VIEW issues_most_commented;
-DROP VIEW number_repo_created_per_date;
-DROP VIEW repo_have_most_commit;
+DROP VIEW IF EXISTS issues_most_commented;
+DROP VIEW IF EXISTS number_repo_created_per_date;
+DROP VIEW IF EXISTS repo_have_most_commit;
 
 CREATE VIEW repo_have_most_commit AS 
      SELECT repo ->> 'id' as "Id repo",
