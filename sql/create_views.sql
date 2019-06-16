@@ -1,3 +1,5 @@
+\c github_events
+
 DROP VIEW issues_most_commented;
 DROP VIEW number_repo_created_per_date;
 DROP VIEW repo_have_most_commit;
