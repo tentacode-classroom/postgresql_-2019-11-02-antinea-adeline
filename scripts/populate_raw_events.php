@@ -39,13 +39,13 @@ function addJsons(array $buffer)
 
 function addingDone(){
     global $connection;
-    $sql = "SELECT json_data from raw_events limit 2";
+    $sql = "SELECT json_data from raw_events limit 10";
 
     $statement = $connection->prepare($sql);
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_COLUMN);
     foreach ($results as $result){
-        echo $result;
+        echo $result."\n";
     }
 }
 //$jsonFilePath = sprintf('%s/../resources/2018-11-02-2.json', __DIR__);
