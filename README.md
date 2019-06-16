@@ -2,6 +2,7 @@
 
 ## Before Starting
 :white_check_mark: Make sure all command you type are in sudo.
+
 :warning: Make sure postgresql service is started overwise it will not work.
     
 Run:
