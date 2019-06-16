@@ -89,6 +89,9 @@ In the `etc` directory you'll find a file named **pg_hba.conf**.
 Copy pg_hba configuration to yours . All the informations you need are indicated in `docs` directory files.
 
 
+### Hope you enjoyed it :grinning: ! 
+
+
 
 
 
