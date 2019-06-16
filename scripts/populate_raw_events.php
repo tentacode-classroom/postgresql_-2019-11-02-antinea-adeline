@@ -43,9 +43,12 @@ function addingDone(){
 
     $statement = $connection->prepare($sql);
     $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC,PDO::FETCH_GROUP);
-    print_r($result);
+    $results = $statement->fetchAll(PDO::FETCH_COLUMN);
+    foreach ($results as $result){
+        echo $result;
+    }
 }
+//$jsonFilePath = sprintf('%s/../resources/2018-11-02-2.json', __DIR__);
 $jsonFilePath = sprintf('%s/../resources/2019-05-28-14.json', __DIR__);
 
 $handle = fopen($jsonFilePath, 'r');

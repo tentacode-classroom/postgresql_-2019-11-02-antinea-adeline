@@ -64,7 +64,7 @@ INSERT INTO create_events (
 );
 
 -- Issue comment events
-/*INSERT INTO issue_comment_events (
+INSERT INTO issue_comment_events (
     type_event, 
     actor,
     repo,
@@ -72,7 +72,7 @@ INSERT INTO create_events (
     created_at,
     issue_info,
     issue_url,
-    info
+    comment_info
 ) VALUES (
     'IssueCommentEvent', 
     '{
@@ -101,13 +101,11 @@ INSERT INTO create_events (
         '{
             "login":"kirlat",
             "id":18631055,
-            "avatar_url":"https://avatars1.githubusercontent.com/u/18631055?v=4",
+            "avatar_url":"https://avatars1.githubusercontent.com/u/18631055?v=4"
         }',
         'Component (Object) Architecture',
         'https://api.github.com/repos/alpheios-project/documentation',
         'open',
-        FALSE,
-        NULL,
         NULL,
         15,
         ARRAY[
@@ -129,4 +127,4 @@ INSERT INTO create_events (
             '2018-11-02T02:00:00Z'::timestamp,
             '2018-11-02T02:00:00Z'::timestamp
     )
-);*/
+);

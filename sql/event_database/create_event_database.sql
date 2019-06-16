@@ -17,8 +17,6 @@ CREATE TYPE "issue_informations" AS(
   title text,
   repo_url text,
   issue_state text,
-  locked boolean,
-  milestone_date timestamp,
   close_date timestamp,
   comments_nb int,
   assignees json[]  
@@ -44,12 +42,12 @@ CREATE TABLE "create_events" (
 
 CREATE TABLE "push_events" (
   branch  varchar(255) NOT NULL,
-  commits json[] NOT NULL
+  commits json[]
 ) INHERITS ("events");
 
 CREATE TABLE "issue_comment_events" (
   issue_info  issue_informations NOT NULL,
   issue_url  text NOT NULL,
-  info informations NOT NULL
+  comment_info informations NOT NULL
 ) INHERITS ("events");
 
